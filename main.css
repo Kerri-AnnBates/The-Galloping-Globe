@@ -1,0 +1,281 @@
+/* COLORS
+
+*Dark Beige        :#A7997D
+*Medium Biege      :#C7BDA9
+*Light Beige       :#FFFDF8
+*Dark Navy Blue    :#5F5973
+*Medium Navy Blue  :#7B7789
+*Light Navy Blue   :#C1C0C5
+*Light Grey        :#EFEEEC
+*Black             :#000000
+*White             :#FFFFFF
+
+*/
+
+/**** BASE CSS ****/
+
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+html,body,h1,h2,h3,h4,h5,h6,a,p,ul,li,header,main,footer,article,img,section,figure,div,nav {
+    margin: 0;
+    padding:0;
+}
+
+header, main, nav, footer, section, article, figure, figcaption, aside {
+    display: block;  /* Compatabillity for older browser */
+}
+
+body {
+    color: #000;
+    font-family: Helvetica, sans-serif, serif;
+    font-size: 16px;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+/**** HEADER ****/
+header {
+    background: url(images/upfeathers.png);
+    background-repeat: repeat;
+    height: 150px;
+    width: 100%;
+}
+
+.hgroup {
+    background-color: rgba(167,153,125,.80);
+    color: #FFF;
+    font-size: 1.5em;
+    filter: alpha(opacity=80);
+}
+
+#tagline {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+nav {
+    background: #5F5973;
+    font-size: 1.1em;
+    font-weight: 500;
+    width:100%;
+}
+
+nav li {
+    list-style: none;
+
+}
+
+nav a {
+    color: #FFFDF8;
+    float: left;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 20%;
+}
+
+a:hover {
+    background: #FFFDF8;
+    color: #5F5973;
+}
+
+.focus-link {
+    background: rgba(255, 253, 248, .90);
+    border-bottom: solid 2px #5F5973;
+    color: #5F5973;
+}
+
+nav, .wrapper, ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/**** MAIN SECTION ****/
+main {
+    background: #EFEEEC;
+}
+
+.wrapper {
+    max-width: 950px;
+    width:100%;
+    margin: 0 auto;
+}
+
+.main-content {
+    background: #fff;
+    box-shadow: 5px 0 3px #ccc, -5px 0 3px #ccc;
+    font-size: .9em;
+    padding: 20px;
+}
+
+.main-content h3 {
+    color: #7B7789;
+    font-size: 1.5em;
+}
+
+.main-images {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main-images img {
+    border: solid 1px #EFEEEC;
+    height: auto;
+    max-width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.main-content-paragraph {
+    line-height: 1.5em;
+    padding-top: 20px;
+}
+
+/* TABLE CSS */
+table {
+    margin: 20px auto;
+}
+
+table caption {
+    border-bottom: 1px solid #C1C0C5;
+    color: #5F5973;
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+table, tr, td, th {
+
+    border-collapse: collapse;
+}
+
+th {
+    background-color:  #5F5973;
+    color: #FFFDF8;
+    padding: 5px 25px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 25px;
+    line-height: 1.5em;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #EFEEEC;
+}
+
+/* DIRECTORY PAGE */
+.directory-list {
+    margin: 20px auto;
+    width: 440px;
+}
+
+dl {
+    line-height: 1.5em;
+}
+
+dd {
+    font-style: italic;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+.directory-list dt {
+    color: #5F5973;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* RETURN PAGE */
+.return-info {
+    border: solid 1px #7B7789;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 0 40px;
+}
+
+.return-info h3 {
+    padding: 10px;
+}
+
+.return-info li {
+    padding: 10px 0;
+}
+
+/* PARTNER COMPANY PAGE */
+.partner-links li {
+    border: 1px solid #C1C0C5;
+    float: left;
+    list-style-type: none;
+    margin: 20px 10px;
+}
+
+.partner-links li:hover {
+    border: 1px solid #7B7789;
+}
+
+/* FORM */
+
+.form-section {
+    background-color: #f2f2f2;
+    border: solid 1px #7B7789;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 500px;
+    padding: 20px;
+    width: 100%;
+}
+
+.form-topics {
+    margin: 15px 0;
+}
+input[type="text"], select{
+    padding: 5px 20px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+#submit {
+    color: #FFF;
+    cursor: pointer;
+    border: solid 1px #7B7789;
+    border-radius: 3px;
+    background-color:#7B7789;
+    padding: 5px 20px;
+}
+
+#submit:hover {
+    background-color: #FFF;
+    color:#7B7789;
+}
+
+.redirect h2 {
+    border: solid 1px #7B7789;
+    padding: 100px 0;
+}
+
+/**** FOOTER ****/
+#footer {
+    background: #5F5973;
+    color: #FFFDF8;
+    clear:both;
+    font-size: .78em;
+    height: 50px;
+    text-align: center;
+}
+
+footer p {
+    padding: 10px 0;
+}

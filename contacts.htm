@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Galloping Globe by Kerri-Ann Bates | Contact Us</title>
+        <meta name="description" content="The Galloping Globe contact page. fill out our contact form with questions and comments. We'd love to hear from you.">
+        <meta name="author" content="Kerri-Ann Bates">
+        <meta name="robots" content="index">
+        <meta name="dcterms.dateCopyrighted" content="2016">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+        <script type="text/javascript">
+
+        //function to validate the contact form
+            function formValidation() {
+                if(document.forms[0].fullName.value == "") {
+                    document.getElementById("fullName").style.borderColor = "#FF0000";
+                    document.getElementById("fullName").focus();
+                    alert("You must enter your name");
+                    return false;
+                } //end of if statement for name input
+
+                if(document.forms[0].email.value == "") {
+                    document.getElementById("email").style.borderColor = "#FF0000";
+                    document.getElementById("email").focus();
+                    alert("You must enter an email address");
+                    return false;
+                } //end of if statement for email input
+
+                return true
+            } //end of formValidate function
+
+            //function to change color of border for form input border
+            function inputChange() {
+                document.getElementById("fullName").style.borderColor = "#CCC";
+                document.getElementById("email").style.borderColor = "#CCC";
+            } //end of inputChange function
+
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="hgroup">
+                <h1>The Galloping Globe</h1>
+                <h2 id="tagline">"Quality Tours since 1998..."</h2>
+            </div>
+        </header>
+        <nav>
+            <div class="wrapper">
+                <ul>
+                    <li><a href="index.htm" title="Galloping Globe Home">Home</a></li>
+                    <li><a href="directory.htm" title="Company Directory">Directory</a></li>
+                    <li><a href="return.htm" title="Return Policy">Return Policy</a></li>
+                    <li><a href="partners.htm" title="Company Partners">Partners</a></li>
+                    <li><a href="contacts.htm" title="Contact Us" class="focus-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="wrapper">
+                <div class="main-content">
+                    <h3>Contact Us</h3>
+                    <div class="form-section">
+                        <form name="contact-info" action="email_to_me.php" method="post" onsubmit="return formValidation();">
+                        <!-- Hidden forms -->
+                            <input type="hidden" id="recipient" name="recipient" value="webdevteacher@gmail.com">
+                            <input type="hidden" id="redirect" name="redirect" value="redirect.htm">
+                            <input type="hidden" id="subject" name="subject" value="Contact submission for the Galloping Globe">
+
+                        <!-- Name and email text form -->
+                            <div class="form-topics">
+                                <label for="fullName">Name</label><br>
+                                <input type="text" name="fullName" id="fullName" onchange="inputChange(this);"><br>
+                                <label for="email">Email</label><br>
+                                <input type="email" name="email" id="email" onchange="inputChange(this);"><br>
+                            </div>
+
+                        <!-- Newsletter radio options -->
+                            <div class="form-topics">
+                                <p>Receive Newsletter:</p>
+                                <input type="radio" name="newsletter" id="newsletter-yes" value="yes" checked>
+                                <label for="newsletter-yes">Yes</label>
+                                <input type="radio" name="newsletter" id="newsletter-no" value="no">
+                                <label for="newsletter-no">No</label><br>
+                            </div>
+
+                        <!-- Topic of interest checkboxes -->
+                            <div class="form-topics">
+                                <p>Topic of interest:</p>
+                                <input type="checkbox" name="travelingTips" id="travelingTips" value="yes">
+                                <label for="travelingTips">Traveling Tips</label>
+                                <input type="checkbox" name="safeTravels" id="safeTravels" value="yes">
+                                <label for="safeTravels">Safety While Traveling</label>
+                                <input type="checkbox" name="thingsToBring" id="thingsToBring" value="yes">
+                                <label for="thingsToBring">Things To Bring</label><br>
+                            </div>
+
+                        <!-- Age group selection -->
+                            <div class="form-topics">
+                                <select size="1" name="ageGroup" id="ageGroup">
+                                    <option>Choose your age group:</option>
+                                    <option value="age18-24">18-24 years old</option>
+                                    <option value="age25-34">25-34 years old</option>
+                                    <option value="age35-50">35-50 years old</option>
+                                    <option value="age50">50+ years old</option>
+                                </select><br>
+                            </div>
+                            <input type="submit" value="Submit" id="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="wrapper">
+                <p>Copyright &copy; Galloping Globe 2016</p>
+
+                <script type="text/javascript">
+                    var modifiedDate = document.lastModified;
+                    document.write("Last modified on " + modifiedDate);
+                </script>
+            </div>
+        </footer>
+    </body>
+</html>
