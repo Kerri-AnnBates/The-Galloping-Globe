@@ -279,3 +279,14 @@ input[type="text"], select{
 footer p {
     padding: 10px 0;
 }
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1050px) {
+  main {
+    background: none;
+  }
+  .main-content {
+    box-shadow: none;
+  }
+}
